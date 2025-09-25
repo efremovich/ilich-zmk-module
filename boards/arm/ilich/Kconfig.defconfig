@@ -1,0 +1,35 @@
+#
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+
+if BOARD_ILICH_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Il'ich"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif # BOARD_ILICH_LEFT
+
+
+if BOARD_ILICH_LEFT || BOARD_ILICH_RIGHT
+
+config BOARD
+	default "ilich"
+
+config ZMK_SPLIT
+	default y
+
+config BT_CTLR
+	default BT
+
+if USB_DEVICE_STACK
+
+config USB_NRFX
+	default y
+
+endif # USB_DEVICE_STACK
+
+endif # BOARD_ILICH_LEFT || BOARD_ILICH_RIGHT

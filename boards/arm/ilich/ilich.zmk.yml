@@ -1,0 +1,14 @@
+file_format: "1"
+id: ilich
+name: Il'ich
+url: https://github.com/efreovich/ilich
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+siblings:
+  - ilich_left
+  - ilich_right
